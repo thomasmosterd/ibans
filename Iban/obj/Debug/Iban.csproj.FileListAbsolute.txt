@@ -1,0 +1,7 @@
+C:\Users\Thomasmosterd\source\repos\Iban\Iban\bin\Debug\Iban.exe.config
+C:\Users\Thomasmosterd\source\repos\Iban\Iban\bin\Debug\Iban.exe
+C:\Users\Thomasmosterd\source\repos\Iban\Iban\bin\Debug\Iban.pdb
+C:\Users\Thomasmosterd\source\repos\Iban\Iban\obj\Debug\Iban.csprojResolveAssemblyReference.cache
+C:\Users\Thomasmosterd\source\repos\Iban\Iban\obj\Debug\Iban.csproj.CoreCompileInputs.cache
+C:\Users\Thomasmosterd\source\repos\Iban\Iban\obj\Debug\Iban.exe
+C:\Users\Thomasmosterd\source\repos\Iban\Iban\obj\Debug\Iban.pdb

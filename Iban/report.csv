@@ -1,0 +1,492 @@
+Testcase;Status;Tijd;CPU;Omschrijving
+Single Threaded;Correct;0,35;100%;Werkt je programma goed met maar 1 thread?
+Single Threaded;Afgebroken;7,57;100%;En met een grotere testcase?
+2 threads (Eigen Lock, 5 runs);Afgebroken;7,60;100%;Opwarmen: 2 threads (gemiddelde 5 runs)
+4 threads (Eigen Lock, 5 runs);Afgebroken;7,58;100%;Opwarmen: 4 threads (gemiddelde 5 runs)
+16 threads (Eigen Lock, 1 run);Afgebroken;7,51;103%;Echt lekker op gang: 16 threads
+7 threads (Eigen Lock, 3 runs);Afgebroken;7,51;101%;Nu geen saaie 2-macht: 7 threads
+Eerlijk delen;Incorrect;0,02;100%;10 getallen over 3 threads verdelen
+Meer threads dan nummers;Incorrect;0,02;100%;10 getallen over 17 threads verdelen
+Lijstmodus (Eigen Lock, 1 thread);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Lijstmodus (Eigen Lock, 2 threads);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Lijstmodus (C#-Lock, 2 threads);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Eerlijk delen;Incorrect;0,01;100%;10 getallen over 3 threads verdelen (lijstmodus)
+Meer threads dan nummers;Incorrect;0,01;100%;10 getallen over 17 threads verdelen (lijstmodus)
+Zoekmodus;Incorrect;0,01;100%;Voorbeeld uit opdracht (Eigen Lock)
+Zoekmodus;Incorrect;0,01;100%;Voorbeeld uit opdracht (Eigen Lock)
+Zoekmodus;Incorrect;0,01;100%;Strikzoekopdracht
+Zoekmodus;Incorrect;0,01;100%;Terminatie
+1 thread (Eigen Lock, 5 runs);Afgebroken;7,61;100%;Baseline: 5 runs met 1 thread.
+Versnellingstest (Eigen Lock);Incorrect;-;-;Is je programma sneller met meer threads?
+2 threads (C#-Lock, 5 runs);Afgebroken;7,61;100%;C#-Lock: 2 threads (gemiddelde 5 runs)
+4 threads (C#-Lock, 5 runs);Afgebroken;7,51;100%;C#-Lock: 4 threads (gemiddelde 5 runs)
+1 thread (C#-Lock, 5 runs);Afgebroken;7,51;100%;Baseline: 5 runs met 1 thread.
+Versnellingstest (C#-Lock);Incorrect;-;-;Is je programma sneller met meer threads?
+Zoekmodus;Incorrect;0,03;100%;Voorbeeld uit opdracht (C#-Lock)
+Zoekmodus;Incorrect;4,29;100%;Groter zoekbereik
+Zoekmodus: 2 threads;Incorrect;0,51;100%;Zoekmodus: 2 threads (gemiddelde 5 runs)
+Zoekmodus: 4 threads;Incorrect;0,49;106%;Zoekmodus: 4 threads (gemiddelde 5 runs)
+Zoekmodus: 1 thread;Incorrect;0,52;101%;Baseline: 5 runs met 1 thread.
+Versnellingstest (Zoekmodus);Incorrect;-;-;Is je programma sneller met meer threads?
+Lijstmodus (Eigen Lock, 8 threads);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Lijstmodus (C#-Lock, 8 threads);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+
+------------------------------------
+
+1;Single Threaded;Correct;0,35;100%;Werkt je programma goed met maar 1 thread?
+Test 1 - Single Threaded
+Werkt je programma goed met maar 1 thread?
+
+Invoer:
+0 139483 928234 11 1 0 0
+
+Uitvoer:
+71705
+
+Verwachte uitvoer:
+71705
+
+Als het antwoord verkeerd is is er waarschijnlijk iets mis met je BSN-test.
+
+------------------------------------
+
+2;Single Threaded;Afgebroken;7,57;100%;En met een grotere testcase?
+Test 2 - Single Threaded
+En met een grotere testcase?
+
+Invoer:
+0 2824374 25823728 24 1 0 0
+
+Uitvoer:
+(leeg)
+
+Als het antwoord verkeerd is is er waarschijnlijk iets mis met je BSN-test.
+
+------------------------------------
+
+3;2 threads (Eigen Lock, 5 runs);Afgebroken;7,60;100%;Opwarmen: 2 threads (gemiddelde 5 runs)
+Test 3 - 2 threads (Eigen Lock, 5 runs)
+Opwarmen: 2 threads (gemiddelde 5 runs)
+
+Invoer:
+0 2824374 25823728 24 2 0 0
+
+Uitvoer:
+(leeg)
+
+------------------------------------
+
+4;4 threads (Eigen Lock, 5 runs);Afgebroken;7,58;100%;Opwarmen: 4 threads (gemiddelde 5 runs)
+Test 4 - 4 threads (Eigen Lock, 5 runs)
+Opwarmen: 4 threads (gemiddelde 5 runs)
+
+Invoer:
+0 2824374 25823728 24 4 0 0
+
+Uitvoer:
+(leeg)
+
+------------------------------------
+
+5;16 threads (Eigen Lock, 1 run);Afgebroken;7,51;103%;Echt lekker op gang: 16 threads
+Test 5 - 16 threads (Eigen Lock, 1 run)
+Echt lekker op gang: 16 threads
+
+Invoer:
+0 2824374 25823728 24 16 0 0
+
+Uitvoer:
+(leeg)
+
+------------------------------------
+
+6;7 threads (Eigen Lock, 3 runs);Afgebroken;7,51;101%;Nu geen saaie 2-macht: 7 threads
+Test 6 - 7 threads (Eigen Lock, 3 runs)
+Nu geen saaie 2-macht: 7 threads
+
+Invoer:
+0 2824374 25823728 24 7 0 0
+
+Uitvoer:
+(leeg)
+
+------------------------------------
+
+7;Eerlijk delen;Incorrect;0,02;100%;10 getallen over 3 threads verdelen
+Test 7 - Eerlijk delen
+10 getallen over 3 threads verdelen
+
+Invoer:
+0 0 10 1 3 0 0
+
+Uitvoer:
+9
+
+Let op: bij deze test is de modulus 1. Het is niet de bedoeling dat je dit afvangt als speciaal geval, deze test dient juist om te zien of je verdeling geen gaten laat vallen.
+
+------------------------------------
+
+8;Meer threads dan nummers;Incorrect;0,02;100%;10 getallen over 17 threads verdelen
+Test 8 - Meer threads dan nummers
+10 getallen over 17 threads verdelen
+
+Invoer:
+0 0 10 1 17 0 0
+
+Uitvoer:
+0
+
+Let op: bij deze test is de modulus 1. Het is niet de bedoeling dat je dit afvangt als speciaal geval, deze test dient juist om te zien of je verdeling geen gaten laat vallen.
+
+------------------------------------
+
+9;Lijstmodus (Eigen Lock, 1 thread);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Test 9 - Lijstmodus (Eigen Lock, 1 thread)
+Dit is een test of de lijstmodus werkt
+
+Invoer:
+0 123456789 123457789 21 1 1 0
+
+Uitvoer:
+1: 123456804
+2: 123456812
+3: 123456820
+4: 123456889
+5: 123456897
+6: 123456901
+7: 123456978
+8: 123456986
+9: 123456994
+10: 123457003
+11: 123457011
+11
+
+------------------------------------
+
+10;Lijstmodus (Eigen Lock, 2 threads);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Test 10 - Lijstmodus (Eigen Lock, 2 threads)
+Dit is een test of de lijstmodus werkt
+
+Invoer:
+0 123456789 123457789 21 2 1 0
+
+Uitvoer:
+1: 123456804
+2: 123456812
+3: 123456820
+4: 123456889
+5: 123456897
+6: 123456901
+7: 123457088
+8: 123457096
+9: 123457100
+9
+
+------------------------------------
+
+11;Lijstmodus (C#-Lock, 2 threads);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Test 11 - Lijstmodus (C#-Lock, 2 threads)
+Dit is een test of de lijstmodus werkt
+
+Invoer:
+1 123456789 123457789 21 2 1 0
+
+Uitvoer:
+1: 123456804
+2: 123456812
+3: 123456820
+4: 123456889
+5: 123456897
+6: 123456901
+7: 123457088
+8: 123457096
+9: 123457100
+9
+
+------------------------------------
+
+12;Eerlijk delen;Incorrect;0,01;100%;10 getallen over 3 threads verdelen (lijstmodus)
+Test 12 - Eerlijk delen
+10 getallen over 3 threads verdelen (lijstmodus)
+
+Invoer:
+0 0 10 1 3 1 0
+
+Uitvoer:
+0
+
+Let op: bij deze test is de modulus 1. Het is niet de bedoeling dat je dit afvangt als speciaal geval, deze test dient juist om te zien of je verdeling geen gaten laat vallen.
+
+------------------------------------
+
+13;Meer threads dan nummers;Incorrect;0,01;100%;10 getallen over 17 threads verdelen (lijstmodus)
+Test 13 - Meer threads dan nummers
+10 getallen over 17 threads verdelen (lijstmodus)
+
+Invoer:
+0 0 10 1 17 1 0
+
+Uitvoer:
+0
+
+Let op: bij deze test is de modulus 1. Het is niet de bedoeling dat je dit afvangt als speciaal geval, deze test dient juist om te zien of je verdeling geen gaten laat vallen.
+
+------------------------------------
+
+14;Zoekmodus;Incorrect;0,01;100%;Voorbeeld uit opdracht (Eigen Lock)
+Test 14 - Zoekmodus
+Voorbeeld uit opdracht (Eigen Lock)
+
+Invoer:
+0 274856170 274856190 11 4 2 c736ca9048d0967a27ec3833832f7ffb571ebd2f
+
+Uitvoer:
+0
+
+Deze test kijkt of de zoekmodus goed geimplementeerd is. Als het antwoord fout is check dan de SHA-hashing nog eens.
+
+------------------------------------
+
+15;Zoekmodus;Incorrect;0,01;100%;Voorbeeld uit opdracht (Eigen Lock)
+Test 15 - Zoekmodus
+Voorbeeld uit opdracht (Eigen Lock)
+
+Invoer:
+0 274856170 274856190 11 4 2 ba9cd915c8e359d9733edcfe9c61e5aca92afb
+
+Uitvoer:
+0
+
+Deze test kijkt of de zoekmodus goed geimplementeerd is. Deze test geeft een niet-bestaande hash, het antwoord zou -1 moeten zijn.
+
+------------------------------------
+
+16;Zoekmodus;Incorrect;0,01;100%;Strikzoekopdracht
+Test 16 - Zoekmodus
+Strikzoekopdracht
+
+Invoer:
+0 274856170 274856190 12 4 2 c736ca9048d0967a27ec3833832f7ffb571ebd2f
+
+Uitvoer:
+0
+
+Bij deze testcase is er wel een rekeningnummer met het gewenste getal, maar dit rekeningnummer voldoet niet aan de m-proef!
+
+------------------------------------
+
+17;Zoekmodus;Incorrect;0,01;100%;Terminatie
+Test 17 - Zoekmodus
+Terminatie
+
+Invoer:
+0 274856182 374856190 11 4 2 c736ca9048d0967a27ec3833832f7ffb571ebd2f
+
+Uitvoer:
+274856182
+0
+
+Deze test kijkt of de terminatiemodus goed werkt. Een TIMELIMIT hier betekent waarschijnlijk dat de terminatie bij het zoeken niet goed werkt. Dit kan ook een false positive zijn (we gaan er bij deze test van uit dat je de nummers van laag naar hoog bekijkt), als je zeker weet dat je terminatie goed werkt kun je deze test negeren.
+
+------------------------------------
+
+18;1 thread (Eigen Lock, 5 runs);Afgebroken;7,61;100%;Baseline: 5 runs met 1 thread.
+Test 18 - 1 thread (Eigen Lock, 5 runs)
+Baseline: 5 runs met 1 thread.
+
+Invoer:
+0 2824374 25823728 24 1 0 0
+
+Uitvoer:
+(leeg)
+
+------------------------------------
+
+19;Versnellingstest (Eigen Lock);Incorrect;-;-;Is je programma sneller met meer threads?
+Test 19 - Versnellingstest (Eigen Lock)
+Is je programma sneller met meer threads? Met deze test kijken we of je programma ook echt sneller gaat lopen als we meer threads gebruiken.
+
+Deze test kan niet beoordeeld worden als de voorafgaande tests niet zijn geslaagd.
+
+Deze test vergelijkt de snelheid van je programma op dezelfde invoer met een verschillend aantal cores. Dit werkt alleen correct als je computer genoeg 'echte' (niet virtuele) cores heeft. Als de versnelling niet hoog genoeg is, kan dit duiden op te agressieve locking of dat je programma niet parallel werkt. Let op dat het resultaat van deze test sterk afhangt van de gebruikte computer, deze test is dus alleen ter indicatie.
+
+------------------------------------
+
+20;2 threads (C#-Lock, 5 runs);Afgebroken;7,61;100%;C#-Lock: 2 threads (gemiddelde 5 runs)
+Test 20 - 2 threads (C#-Lock, 5 runs)
+C#-Lock: 2 threads (gemiddelde 5 runs)
+
+Invoer:
+1 2824374 25823728 24 2 0 0
+
+Uitvoer:
+(leeg)
+
+------------------------------------
+
+21;4 threads (C#-Lock, 5 runs);Afgebroken;7,51;100%;C#-Lock: 4 threads (gemiddelde 5 runs)
+Test 21 - 4 threads (C#-Lock, 5 runs)
+C#-Lock: 4 threads (gemiddelde 5 runs)
+
+Invoer:
+1 2824374 25823728 24 4 0 0
+
+Uitvoer:
+(leeg)
+
+------------------------------------
+
+22;1 thread (C#-Lock, 5 runs);Afgebroken;7,51;100%;Baseline: 5 runs met 1 thread.
+Test 22 - 1 thread (C#-Lock, 5 runs)
+Baseline: 5 runs met 1 thread.
+
+Invoer:
+1 2824374 25823728 24 1 0 0
+
+Uitvoer:
+(leeg)
+
+------------------------------------
+
+23;Versnellingstest (C#-Lock);Incorrect;-;-;Is je programma sneller met meer threads?
+Test 23 - Versnellingstest (C#-Lock)
+Is je programma sneller met meer threads? Met deze test kijken we of je programma ook echt sneller gaat lopen als we meer threads gebruiken.
+
+Deze test kan niet beoordeeld worden als de voorafgaande tests niet zijn geslaagd.
+
+Deze test vergelijkt de snelheid van je programma op dezelfde invoer met een verschillend aantal cores. Dit werkt alleen correct als je computer genoeg 'echte' (niet virtuele) cores heeft. Als de versnelling niet hoog genoeg is, kan dit duiden op te agressieve locking of dat je programma niet parallel werkt. Let op dat het resultaat van deze test sterk afhangt van de gebruikte computer, deze test is dus alleen ter indicatie.
+
+------------------------------------
+
+24;Zoekmodus;Incorrect;0,03;100%;Voorbeeld uit opdracht (C#-Lock)
+Test 24 - Zoekmodus
+Voorbeeld uit opdracht (C#-Lock)
+
+Invoer:
+1 274856170 274856190 11 4 2 c736ca9048d0967a27ec3833832f7ffb571ebd2f
+
+Uitvoer:
+0
+
+Deze test kijkt of de zoekmodus goed geimplementeerd is. Als het antwoord fout is check dan de SHA-hashing nog eens.
+
+------------------------------------
+
+25;Zoekmodus;Incorrect;4,29;100%;Groter zoekbereik
+Test 25 - Zoekmodus
+Groter zoekbereik
+
+Invoer:
+1 261756170 274896190 47 4 2 a8428d9c87323e977978a67ee48827ca154bd84b
+
+Uitvoer:
+0
+
+Deze test kijkt of de zoekmodus goed geimplementeerd is. Als het antwoord fout is check dan de SHA-hashing nog eens.
+
+------------------------------------
+
+26;Zoekmodus: 2 threads;Incorrect;0,51;100%;Zoekmodus: 2 threads (gemiddelde 5 runs)
+Test 26 - Zoekmodus: 2 threads
+Zoekmodus: 2 threads (gemiddelde 5 runs)
+
+Invoer:
+1 261756170 262035744 1 2 2 356a192b7913b04c54574d18c28d46e6395428ab
+
+Uitvoer:
+0
+
+Je programma geeft consistent het verkeerde antwoord. Dit duidt op een fout in de verdeling van het zoekbereik onder de threads (waarschijnlijk) of een verkeerde elfproef (als de test met 1 thread wel goed gaat dan is dit laatste onwaarschijnlijk).
+
+------------------------------------
+
+27;Zoekmodus: 4 threads;Incorrect;0,49;106%;Zoekmodus: 4 threads (gemiddelde 5 runs)
+Test 27 - Zoekmodus: 4 threads
+Zoekmodus: 4 threads (gemiddelde 5 runs)
+
+Invoer:
+1 261756170 262035744 1 4 2 356a192b7913b04c54574d18c28d46e6395428ab
+
+Uitvoer:
+0
+
+Je programma geeft consistent het verkeerde antwoord. Dit duidt op een fout in de verdeling van het zoekbereik onder de threads (waarschijnlijk) of een verkeerde elfproef (als de test met 1 thread wel goed gaat dan is dit laatste onwaarschijnlijk).
+
+------------------------------------
+
+28;Zoekmodus: 1 thread;Incorrect;0,52;101%;Baseline: 5 runs met 1 thread.
+Test 28 - Zoekmodus: 1 thread
+Baseline: 5 runs met 1 thread.
+
+Invoer:
+1 261756170 262035744 1 1 2 356a192b7913b04c54574d18c28d46e6395428ab
+
+Uitvoer:
+0
+
+Je programma geeft consistent het verkeerde antwoord. Dit duidt op een fout in de verdeling van het zoekbereik onder de threads (waarschijnlijk) of een verkeerde elfproef (als de test met 1 thread wel goed gaat dan is dit laatste onwaarschijnlijk).
+
+------------------------------------
+
+29;Versnellingstest (Zoekmodus);Incorrect;-;-;Is je programma sneller met meer threads?
+Test 29 - Versnellingstest (Zoekmodus)
+Is je programma sneller met meer threads? Met deze test kijken we of je programma ook echt sneller gaat lopen als we meer threads gebruiken.
+
+Versnelling 1 naar 2 threads: 102% (moet minstens 125% zijn)
+Versnelling 2 naar 4 threads: 104% (moet minstens 110% zijn)
+De versnelling van 1 naar 2 threads is niet hoog genoeg
+De versnellingstest van 2 naar 4 cores kan niet worden uitgevoerd op een computer met minder dan 4 cores!
+
+Deze test vergelijkt de snelheid van je programma op dezelfde invoer met een verschillend aantal cores. Dit werkt alleen correct als je computer genoeg 'echte' (niet virtuele) cores heeft. Als de versnelling niet hoog genoeg is, kan dit duiden op te agressieve locking of dat je programma niet parallel werkt. Let op dat het resultaat van deze test sterk afhangt van de gebruikte computer, deze test is dus alleen ter indicatie.
+
+------------------------------------
+
+30;Lijstmodus (Eigen Lock, 8 threads);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Test 30 - Lijstmodus (Eigen Lock, 8 threads)
+Dit is een test of de lijstmodus werkt
+
+Invoer:
+0 123456789 123457789 21 8 1 0
+
+Uitvoer:
+1: 123456804
+2: 123456812
+3: 123456820
+4: 123456804
+5: 123456812
+6: 123456820
+7: 123456889
+8: 123456889
+9: 123456897
+10: 123456901
+11: 123456897
+12: 123456901
+12
+
+------------------------------------
+
+31;Lijstmodus (C#-Lock, 8 threads);Incorrect;0,01;100%;Dit is een test of de lijstmodus werkt
+Test 31 - Lijstmodus (C#-Lock, 8 threads)
+Dit is een test of de lijstmodus werkt
+
+Invoer:
+1 123456789 123457789 21 8 1 0
+
+Uitvoer:
+1: 123456804
+2: 123456812
+3: 123456804
+4: 123456812
+5: 123456820
+6: 123456820
+7: 123456889
+8: 123456889
+9: 123456897
+10: 123456901
+11: 123456897
+12: 123456901
+12
+
+Microsoft Windows NT 6.2.9200.0 (x64)
+.NET version: 4.0.30319.42000
+2 physical core(s), 4 virtual core(s) (hyperthreading), 1 processor(s)
